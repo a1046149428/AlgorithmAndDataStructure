@@ -7,6 +7,8 @@ package designpattern.strategypattern;
  * 2018/10/23 16:41
  */
 
+import javax.swing.*;
+
 /**
  * 通过使用多态,以改变策略
  */
