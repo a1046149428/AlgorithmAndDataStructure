@@ -1,13 +1,8 @@
-package designpattern.observerpattern.javaversion;
-
-import designpattern.observerpattern.DisplayElement;
-
-import java.util.Observable;
-import java.util.Observer;
+package designpattern.observer;
 
 /**
  * @author cherbini
- * 2018/10/24 16:11
+ * 2018/10/24 10:48
  */
 public class StatisticsDisplay implements Observer, DisplayElement
 {
@@ -17,12 +12,12 @@ public class StatisticsDisplay implements Observer, DisplayElement
     private float minHumidity;
     private float maxPressure;
     private float minPressure;
-    private Observable waetherData;
+    private Subject waetherData;
 
-    public StatisticsDisplay(Observable waetherData)
+    public StatisticsDisplay(Subject waetherData)
     {
         this.waetherData = waetherData;
-        waetherData.addObserver(this::update);
+        waetherData.registerObserver(this::update);
     }
 
     @Override
@@ -37,12 +32,11 @@ public class StatisticsDisplay implements Observer, DisplayElement
     }
 
     @Override
-    public void update(Observable obs,Object o)
+    public void update(float temp, float humidity, float pressure)
     {
-        WeatherData weatherData=(WeatherData) obs;
-        judgeHumidity(weatherData.getHumidity());
-        judgePressure(weatherData.getPressure());
-        judgeTemperature(weatherData.getTemprature());
+        judgeHumidity(humidity);
+        judgePressure(pressure);
+        judgeTemperature(temp);
         display();
 
     }
@@ -84,7 +78,7 @@ public class StatisticsDisplay implements Observer, DisplayElement
         }
         else if (this.maxPressure > pressure && this.minPressure == 0.0f)
         {
-            minPressure=pressure;
+          minPressure=pressure;
         }
 
     }

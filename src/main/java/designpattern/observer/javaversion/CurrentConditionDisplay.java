@@ -1,6 +1,6 @@
-package designpattern.observerpattern.javaversion;
+package designpattern.observer.javaversion;
 
-import designpattern.observerpattern.DisplayElement;
+import designpattern.observer.DisplayElement;
 
 import java.util.Observable;
 import java.util.Observer;

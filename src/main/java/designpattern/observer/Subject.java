@@ -1,4 +1,4 @@
-package designpattern.observerpattern;
+package designpattern.observer;
 
 /**
  * 观察者模式

@@ -1,4 +1,4 @@
-package designpattern.strategypattern;
+package designpattern.strategy;
 
 /**
  * @author cherbini

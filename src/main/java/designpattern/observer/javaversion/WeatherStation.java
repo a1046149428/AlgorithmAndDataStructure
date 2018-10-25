@@ -1,4 +1,4 @@
-package designpattern.observerpattern.javaversion;
+package designpattern.observer.javaversion;
 
 /**
  * @author cherbini
