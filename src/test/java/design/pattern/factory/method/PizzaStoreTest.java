@@ -3,8 +3,6 @@ package design.pattern.factory.method;
 import design.pattern.factory.Pizza;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
 /**
  * @author cherbini
  * 2018/10/29 15:18

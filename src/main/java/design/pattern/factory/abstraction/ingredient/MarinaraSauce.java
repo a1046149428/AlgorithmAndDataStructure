@@ -1,4 +1,4 @@
-package design.pattern.factory.abstraction;
+package design.pattern.factory.abstraction.ingredient;
 
 import design.pattern.factory.abstraction.ingredient.Sauce;
 

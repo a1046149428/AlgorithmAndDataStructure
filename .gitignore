@@ -34,3 +34,5 @@ hs_err_pid*
 #src/main/resources/
 #src/test/
 target/generated-sources/
+src/main/java/design/pattern/factory/abstraction,/
+src/main/resources/
