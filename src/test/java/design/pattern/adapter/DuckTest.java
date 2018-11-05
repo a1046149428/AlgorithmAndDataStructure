@@ -15,6 +15,7 @@ public class DuckTest
         Duck turketAdapter = new TurkeyAdapter(turkey);
         System.out.println("turkey");
         turkey.gobble();
+
         turkey.fly();
         System.out.println("duck");
         duck.fly();
