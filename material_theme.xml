@@ -1,12 +1,11 @@
 <application>
   <component name="MaterialThemeConfig">
-    <option name="isContrastMode" value="true" />
-    <option name="isHighContrast" value="true" />
     <option name="isWizardShown" value="true" />
     <option name="pristineConfig" value="false" />
     <option name="useMaterialIcons" value="false" />
+    <option name="rightTreeIndent" value="6" />
     <option name="settingsSelectedTab" value="2" />
-    <option name="accentColor" value="7de0e9" />
+    <option name="accentColor" value="6c9ee9" />
     <option name="selectedTheme" value="DARKER" />
     <option name="userId" value="-19c6dd5e:168b19eae20:-8000" />
     <option name="version" value="3.5.0.1" />
