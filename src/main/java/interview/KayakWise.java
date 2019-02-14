@@ -45,8 +45,13 @@ public class KayakWise
             }
 
         }
-        if (month > 2 && year % 4 == 0 && year % 400 == 0 && year % 100 != 0) total += 29;
-        else if (month > 2) total += 28;
+        if (month > 2 && year % 4 == 0 && year % 400 == 0 && year % 100 != 0) {
+            total += 29;
+        } else {
+            if (month > 2) {
+                total += 28;
+            }
+        }
         return day + total;
     }
 

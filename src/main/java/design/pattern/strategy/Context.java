@@ -10,17 +10,14 @@ package design.pattern.strategy;
 /**
  * 通过使用多态,以改变策略
  */
-public class Context
-{
+public class Context {
     private Strategy strategy;
 
-    public Context(Strategy strategy)
-    {
+    public Context(Strategy strategy) {
         this.strategy = strategy;
     }
 
-    public int executeStrategy(int num1, int num2)
-    {
+    public int executeStrategy(int num1, int num2) {
         return strategy.doOperation(num1, num2);
     }
 }
