@@ -19,4 +19,6 @@ public class KayakWiseTest
     KayakWise.printfRepeatValueAndPosition(a);
     }
 
+
+
 }

@@ -6,13 +6,22 @@ package design.pattern.state;
  */
 public class GumBallMachine {
     State soldOutState;
-    State noQuarterState;
-    State hasQuarterState;
-    State soldState;
+    private State noQuarterState;
+    private State hasQuarterState;
+    private State soldState;
+    private State winnerState;
 
-    State state=soldOutState;
-    int count=0;
+    private State state=soldOutState;
+    private int count;
 
+
+    public State getWinnerState() {
+        return winnerState;
+    }
+
+    public void setWinnerState(State winnerState) {
+        this.winnerState = winnerState;
+    }
 
     public GumBallMachine(int numberGumballs){
         soldOutState=new SoldOutState(this);
