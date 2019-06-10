@@ -27,7 +27,7 @@ public class Polynomial
     }
 
     /**
-     * 秦久韶算法，提取公因数
+     * 秦九韶算法，提取公因数
      *
      * @param n 第n项
      * @param a 常数数组
