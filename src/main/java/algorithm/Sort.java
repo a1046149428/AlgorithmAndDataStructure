@@ -1,8 +1,8 @@
 package algorithm;
 
-import org.junit.Test;
-
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 /**
  * @author cherbini
@@ -27,7 +27,10 @@ public class Sort
 
     public static void selectionSort(int[] arr)
     {
-        if ((arr == null) || (arr.length == 0)) return;
+        if ((arr == null) || (arr.length == 0))
+        {
+            return;
+        }
         int minIndex;
         for (int i = 0; i < arr.length; i++)
         {
@@ -51,7 +54,10 @@ public class Sort
 
     public static void bubbleSort(int[] arr)
     {
-        if ((arr == null) || (arr.length == 0)) return;
+        if ((arr == null) || (arr.length == 0))
+        {
+            return;
+        }
         for (int i = 0; i < arr.length; i++)
         {
             for (int j = 0; j < arr.length - i - 1; j++)
@@ -66,14 +72,25 @@ public class Sort
         }
     }
 
+
+
     public static void quickSort(int[] arr, int left, int right)
     {
-        if (left >= right || arr == null || arr.length <= 1) return;
+        if (left >= right || arr == null || arr.length <= 1)
+        {
+            return;
+        }
         int i = left, j = right, key = arr[(i + j) / 2];
         while (i <= j)
         {
-            while (arr[i] < key) ++i;
-            while (arr[j] > key) --j;
+            while (arr[i] < key)
+            {
+                ++i;
+            }
+            while (arr[j] > key)
+            {
+                --j;
+            }
             if (i < j)
             {
                 int temp = arr[i];
@@ -89,6 +106,21 @@ public class Sort
         }
         quickSort(arr, i, right);
         quickSort(arr, left, j);
+    }
+
+    public static void main(String[] args)
+    {
+        int[] ints = {1, 2, 3, 4, 5, 6};
+        int[] ints2 = {1, 1, 1, 6, 5, 6};
+        quickSort(ints, 0, ints.length - 1);
+        quickSort(ints2, 0, ints.length - 1);
+
+        for (int i:ints){
+            System.out.println(i);
+        }
+        for (int i:ints2){
+            System.out.println(i);
+        }
     }
 
 }
