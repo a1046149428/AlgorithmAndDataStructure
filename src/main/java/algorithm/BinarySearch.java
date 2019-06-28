@@ -25,6 +25,7 @@ public class BinarySearch
     {
         Optional.ofNullable(list).filter(child -> child.size() != 0).orElseThrow(IllegalAccessException::new);
         Optional.ofNullable(t).orElseThrow(NullPointerException::new);
+        
         int low = 0;
         int high = list.size() - 1;
         int mid;
